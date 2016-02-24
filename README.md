@@ -7,6 +7,12 @@
 | Choose API |     |
 | Make it work with JavaScript |     |
 | Figure out good mechanism to trigger grammar check  |     |
+| Solve conflict with browser default  |     |
+
+
+### Logic
+Firefox's logic: trigger when space or enter.
+
 ### Reference
 http://www.afterthedeadline.com/api.slp  
 example:  
@@ -15,3 +21,4 @@ http://service.afterthedeadline.com/checkGrammar?key=dfefefw33&data=He%20do%20sh
 ``` 
 
 https://languagetool.org/
+
