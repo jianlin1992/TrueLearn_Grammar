@@ -1,40 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-     <link rel="stylesheet" type="text/css" media="screen" href="css/atd.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/atd.css"/>
+    <script src="checker.js"></script>
+    <script src="jQuery.js"></script>
+    <script src="atd.core.js"></script>
+    <script src="jquery.atd.js"></script>
+    <script src="jquery.atd.textarea.js"></script>
+    <script src="csshttprequest.js"></script>
     <meta charset="UTF-8">
     <title>Grammar Check Test</title>
 </head>
 <body>
 <h4>test</h4>
-<!--<form>-->
-    <!--<p>test</p>-->
-<!--<textarea id="checkinput" rows="4" cols="50">-->
-<!--</textarea>-->
-    <!--<input type="button" id="checkbutton">-->
-<!--</form>-->
-
-
 
 <script>
- function check()
- {
-    AtD.checkTextAreaCrossAJAX('textInput', 'checkLink', 'Edit Text');
- }
- </script>
+    function check() {
+        AtD.checkTextAreaCrossAJAX('review', 'checkLink', 'Edit Text');
+    }
+</script>
 
- <p>This demo demonstrates how to use <a href="http://www.afterthedeadline.com">AtD</a> to check spelling and grammar in a textarea.</p>
+<p>This demo demonstrates how to use <a href="http://www.afterthedeadline.com">AtD</a> to check spelling and grammar in
+    a textarea.</p>
 
- <textarea id="textInput" class="input"></textarea>
+<form id="reviewForm">
+    <textarea id="review" name="review" class="input"
+              style="width: 400px; height: 100px; border: 1px solid black"></textarea>
+    <p><a href="javascript:submit()">Submit Review</a> | <a href="javascript:check()" id="checkLink">Check Spelling</a>
+    </p>
+</form>
+<!--<textarea id="textInput" class="input"></textarea>-->
 
- <p><a href="javascript:check()" id="checkLink">Check Spelling</a></p>
+<!--<p><a href="javascript:check()" id="checkLink">Check Spelling</a></p>-->
 
 
-<script src="checker.js"></script>
-<script src="jQuery.js"></script>
-<script src="atd.core.js"></script>
-<script src="jquery.atd.js"></script>
-<script src="jquery.atd.textarea.js"></script>
-<script src="csshttprequest.js"></script>
 </body>
 </html>

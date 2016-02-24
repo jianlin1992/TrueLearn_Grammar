@@ -244,8 +244,9 @@ AtD.explainError = function () {
 };
 
 AtD.test = function (e) {
-    alert("ahhah");
-    alert(e);
+    if (confirm(e)) {
+        alert("gotchar");
+    }
 };
 
 
@@ -307,7 +308,9 @@ AtD.suggest = function (element) {
             suggest.append('<a href="javascript:AtD.ignoreAll(\'' + AtD.container + '\')">' + AtD.getLang('menu_option_ignore_all', 'Ignore all') + '</a>');
 
         suggest.append('<a href="javascript:AtD.editSelection(\'' + AtD.container + '\')" class="spell_sep_bottom spell_sep_top">' + AtD.getLang('menu_option_edit_selection', 'Edit Selection...') + '</a>');
-        suggest.append('<a href="javascript:AtD.test(\'' + AtD.container + '\')" class="spell_sep_bottom spell_sep_top">' + AtD.getLang('menu_option_test', 'Test') + '</a>');
+
+        //see 'test' function
+        suggest.append('<a href="javascript:AtD.test(\'' + AtD.container + '\')" class="spell_sep_bottom spell_sep_top">' + AtD.getLang('menu_option_test', 'Testing feature') + '</a>');
     }
     else {
         if (AtD.callback_f != undefined && AtD.callback_f.ignore != undefined)
